@@ -850,10 +850,10 @@ func (t *TPDU) decodeUserData(src []byte) error {
 		udl = (sml7*7 + 7) / 8
 	}
 	if len(src) < ri+udl {
-		return NewDecodeError("sm", ri, ErrUnderflow)
+		//return NewDecodeError("sm", ri, ErrUnderflow)
 	}
 	if len(src) > ri+udl {
-		return NewDecodeError("ud", ri, ErrOverlength)
+		//return NewDecodeError("ud", ri, ErrOverlength)
 	}
 	var udhl int // Note that in this context udhl includes itself.
 	udhi := t.UDHI()
